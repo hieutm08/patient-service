@@ -1,0 +1,4 @@
+### Find all to the patients
+GET http://localhost:8000/patients
+
+###

@@ -1,0 +1,44 @@
+### Update is successful
+PUT http://localhost:8000/patients/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+  "name": "John Doe 4",
+  "email": "test123@example.com",
+  "address": "123 Main street",
+  "dateOfBirth": "1999-12-01"
+}
+
+### Email is duplicated
+PUT http://localhost:8000/patients/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+  "name": "John Doe 4",
+  "email": "jane.smith@example.com",
+  "address": "123 Main street",
+  "dateOfBirth": "1999-12-01"
+}
+
+### Email is not found
+PUT http://localhost:8000/patients/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+  "name": "John Doe 4",
+  "address": "123 Main street",
+  "dateOfBirth": "1999-12-01"
+}
+
+### Email is blank
+PUT http://localhost:8000/patients/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+
+{
+  "name": "John Doe 4",
+  "email": "",
+  "address": "123 Main street",
+  "dateOfBirth": "1999-12-01"
+}
+
+###
